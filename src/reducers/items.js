@@ -1,7 +1,7 @@
 export function itemsHasErrored(state = false, action) {
     switch (action.type) {
         case 'ITEMS_HAS_ERRORED':
-            return action.itemsHasErrored;
+            return action.hasErrored;
 
         default:
             return state;
@@ -11,7 +11,7 @@ export function itemsHasErrored(state = false, action) {
 export function itemsIsLoading(state = false, action) {
     switch (action.type) {
         case 'ITEMS_IS_LOADING':
-            return action.itemsIsLoading;
+            return action.isLoading;
 
         default:
             return state;

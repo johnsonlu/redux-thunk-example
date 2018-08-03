@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { itemsFetchData } from "../actions/items";
+import PropTypes from "prop-types";
 
 class ItemList extends Component {
 
@@ -27,12 +28,12 @@ class ItemList extends Component {
     }
 }
 
-// ItemList.propTypes = {
-//     fetchData: PropTypes.func.isRequired,
-//     items: PropTypes.array.isRequired,
-//     hasErrored: PropTypes.bool.isRequired,
-//     isLoading: PropTypes.bool.isRequired
-// };
+ItemList.propTypes = {
+    fetchData: PropTypes.func.isRequired,
+    items: PropTypes.array.isRequired,
+    hasErrored: PropTypes.bool.isRequired,
+    isLoading: PropTypes.bool.isRequired
+};
 
 const mapStateToProps = (state) => {
     return {
